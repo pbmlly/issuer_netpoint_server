@@ -1,0 +1,15 @@
+<configuration>
+    <id>jfinal</id>
+    <name>jfinal Service()</name>
+    <description>jfinal的服务</description>
+    <executable>java</executable>
+    <logmode>rotate</logmode>
+    <logpath>%BASE%\logs</logpath>
+    <env name="MAIN_CLASS" value="CsntMainStart"/>
+    <env name="JAVA_OPTS" value="-Xms256m -Xmx1024m"/>
+    <env name="APP_BASE_PATH" value="%BASE%" />
+    <env name="CP" value="%APP_BASE_PATH%\config;%APP_BASE_PATH%\lib\*" />
+    <arguments>-Xverify:none %JAVA_OPTS% -cp %CP% %MAIN_CLASS%</arguments>
+    <stopparentprocessfirst>true</stopparentprocessfirst>
+    <stoptimeout>-1</stoptimeout>
+</configuration>

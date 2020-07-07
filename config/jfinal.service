@@ -1,0 +1,16 @@
+[Unit]
+Description=undertow, web server
+After=syslog.target network.target remote-fs.target nss-lookup.target
+
+[Service]
+Type=forking
+ExecStart={项目路径}/undertow.sh start
+ExecStop={项目路径}/undertow.sh stop
+ExecReload={项目路径}/undertow.sh restart
+PrivateTmp=true
+#非正常退出时（退出状态码非0），包括被信号终止和超时，才会重启  重启等待60秒
+Restart=on-failure
+RestartSec=60
+
+[Install]
+WantedBy=multi-user.target
