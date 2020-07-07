@@ -28,7 +28,7 @@
     <properties>
         <jwt.version>3.4.0</jwt.version>
         <jjwt.version>0.9.1</jjwt.version>
-        <beanutil.version>1.9.3</beanutil.version>
+        <beanutil.version>1.9.4</beanutil.version>
         <!-- Test libs -->
         <junit-version>4.12</junit-version>
         <!-- jfinal libs -->
